@@ -151,7 +151,7 @@ function init() {
   //http://stackoverflow.com/questions/2090551/parse-query-string-in-javascript
   var dest = unescape(location.search.replace(/^.*\=/, '')).replace(/\+/g, " ");
   if (dest) {
-    load_by_url(dest);
+    //load_by_url(dest);
   }
 }
 
@@ -294,14 +294,8 @@ $(document).ready(function () {
 });
 
 function getFiles() {
-  // return {"sketch.ino": Blockly.Generator.workspaceToCode('Arduino') }
-  //$('textarea#textarea_arduino').val() //&lt; et &lt;
   var code = $('textarea#textarea_arduino').val();
-
   code = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  //code=code.replace(">","&gt;");
-  //code = "<![CDATA[" + code + "]]>";
-  //document.write (code);
   return {
     "sketch.ino": code
   }

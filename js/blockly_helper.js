@@ -168,7 +168,6 @@ function onSuccess() {
     }
   }
 }
-
 /*
 function load_by_url(uri) {
   ajax = createAJAX();
@@ -183,4 +182,5 @@ function load_by_url(uri) {
 　　ajax.onreadystatechange = onSuccess;
 　　ajax.open ("GET", uri, true);
 　　ajax.send ("");
-}*/
+}
+*/
