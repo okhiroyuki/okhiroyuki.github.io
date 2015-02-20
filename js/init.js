@@ -2,6 +2,9 @@
  * List of tab names.
  * @private
  */
+
+'use strict';
+
 var TABS_ = ['blocks', 'arduino', 'term', 'xml'];
 
 var selected = 'blocks';
@@ -229,7 +232,7 @@ function clipboard() {
 };
 
 function getParam() {
-  var categoryKey = "ja";
+  var categoryKey = "en";
   var url = location.href;
   var parameters = url.split("?");
   if (Number(parameters.length) == 1) {
@@ -250,10 +253,17 @@ function setScript() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.id = 'msg';
-  if (getParam() == "ja") {
+  var param = getParam();
+  if (param == "ja") {
     script.src = "msg/js/ja.js";
   } else {
-    script.src = "msg/js/en.js";
+    script.src = "msg//js/en.js";
+  }
+  var options = document.getElementById('languageMenu');
+  for(var i=0;i<options.length;i++){
+    if(options[i].value == param){
+      options[i].selected=true;
+    }
   }
   var firstScript = document.getElementsByTagName('head')[0];
   firstScript.parentNode.insertBefore(script, firstScript);
@@ -293,6 +303,12 @@ function getFiles() {
   return {
     "sketch.ino": code
   }
+}
+
+function change_lang(obj){
+  var val = obj.options[obj.selectedIndex].value;
+  var loc = window.location;
+  window.location = loc.protocol + '//' + loc.host + loc.pathname + '?lang=' + val;
 }
 
 function upload() {
