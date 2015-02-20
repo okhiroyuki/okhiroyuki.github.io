@@ -141,7 +141,7 @@ function init() {
 
   var toolbox = document.getElementById('toolbox');
   Blockly.inject(document.getElementById('content_blocks'), {
-    media: '../../media/',
+    media: 'media/',
     toolbox: toolbox
   });
 
