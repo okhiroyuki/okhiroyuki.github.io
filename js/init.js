@@ -253,11 +253,13 @@ function setScript() {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.id = 'msg';
-  var param = getParam();
+  var c = $.cookie("lang");
+  if(c != "") var param = c;
+  else param = getParam();
   if (param == "ja") {
     script.src = "msg/js/ja.js";
   } else {
-    script.src = "msg//js/en.js";
+    script.src = "msg/js/en.js";
   }
   var options = document.getElementById('languageMenu');
   for(var i=0;i<options.length;i++){
@@ -307,6 +309,7 @@ function getFiles() {
 
 function change_lang(obj){
   var val = obj.options[obj.selectedIndex].value;
+  $.cookie( "lang" , val );
   var loc = window.location;
   window.location = loc.protocol + '//' + loc.host + loc.pathname + '?lang=' + val;
 }
