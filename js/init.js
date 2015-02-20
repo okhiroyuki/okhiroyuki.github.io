@@ -254,7 +254,7 @@ function setScript() {
   script.type = 'text/javascript';
   script.id = 'msg';
   var c = $.cookie("lang");
-  if(c != "") var param = c;
+  if (c != "") var param = c;
   else param = getParam();
   if (param == "ja") {
     script.src = "msg/js/ja.js";
@@ -262,9 +262,9 @@ function setScript() {
     script.src = "msg/js/en.js";
   }
   var options = document.getElementById('languageMenu');
-  for(var i=0;i<options.length;i++){
-    if(options[i].value == param){
-      options[i].selected=true;
+  for (var i = 0; i < options.length; i++) {
+    if (options[i].value == param) {
+      options[i].selected = true;
     }
   }
   var firstScript = document.getElementsByTagName('head')[0];
@@ -307,9 +307,11 @@ function getFiles() {
   }
 }
 
-function change_lang(obj){
+function change_lang(obj) {
   var val = obj.options[obj.selectedIndex].value;
-  $.cookie( "lang" , val );
+  $.cookie("lang", val, {
+    expires: 7
+  });
   var loc = window.location;
   window.location = loc.protocol + '//' + loc.host + loc.pathname + '?lang=' + val;
 }
