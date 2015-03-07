@@ -25,7 +25,7 @@
   <table>
     <tr>
       <td>
-        <h1><a href="https://github.com/gasolin/BlocklyDuino/wiki">BlocklyDuino</a> &gt; web-based visual programming editor for arduino</h1>
+        <h1><a href="https://github.com/okhiroyuki/BlocklyDuino/wiki">BlocklyDuino</a> &gt; web-based visual programming editor for arduino</h1>
       </td>
     </tr>
     <tr>
@@ -85,7 +85,8 @@
       <block type="inout_digital_read"></block>
       <block type="inout_analog_write"></block>
       <block type="inout_analog_read"></block>
-      <!--<block type="inout_buildin_led"></block>-->
+      <block type="pulsein"></block>
+      <block type="tone"></block>
     </category>
     <category id="category_communication">
       <block type="serial_available"></block>
@@ -93,48 +94,15 @@
       <block type="serial_println"></block>
       <block type="serial_read"></block>
     </category>
-    <!--
-     <category id="category_servo">
-      <block type="servo_move"></block>
-      <block type="servo_read_degrees"></block>
-    </category>
-    <category id="category_grove_analog">
-      <block type="grove_rotary_angle"></block>
-      <block type="grove_temporature_sensor"></block>
-      <block type="grove_sound_sensor"></block>
-      <block type="grove_thumb_joystick"></block>
-    </category>
-    <category id="category_grove">
-      <block type="grove_led"></block>
-      <block type="grove_button"></block>
-      <block type="grove_relay"></block>
-      <block type="grove_tilt_switch"></block>
-      <block type="grove_piezo_buzzer"></block>
-      <block type="grove_pir_motion_sensor"></block>
-      <block type="grove_line_finder"></block>
-      <block type="grove_rgb_led"></block>
-      <block type="grove_rgb_led_container"></block>
-      <block type="grove_rgb_led_item"></block>
-    </category>
-    <category id="category_grove_lcd">
-      <block type="grove_serial_lcd_print"></block>
-      <block type="grove_serial_lcd_power"></block>
-      <block type="grove_serial_lcd_effect"></block>
-      <block type="grove_ultrasonic_ranger"></block>
-    </category>
-    <category id="category_grove_motor">
-      <block type="grove_motor_shield"></block>
-    </category>
-    -->
     <sep></sep>
     <category id="category_logic">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
       <block type="logic_operation"></block>
       <block type="logic_negate"></block>
-      <block type="logic_null"></block>
     </category>
-    <category id="category_control">
+    <category id="category_loops">
+      <block type="controls_repeat"></block>
       <block type="controls_for">
         <value name="FROM">
           <block type="math_number">
@@ -156,10 +124,13 @@
       <block type="delayMicroseconds"></block>
     </category>
     <category id="category_math">
-      <block type="math_map"></block>
       <block type="math_number"></block>
       <block type="math_arithmetic"></block>
+      <block type="math_single"></block>
+      <block type="math_constrain"></block>
+      <block type="math_pow"></block>
       <block type="math_random_max_min"></block>
+      <block type="math_map"></block>
     </category>
     <category id="category_text">
       <block type="text"></block>

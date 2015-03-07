@@ -141,7 +141,7 @@ function init() {
 
   var toolbox = document.getElementById('toolbox');
   Blockly.inject(document.getElementById('content_blocks'), {
-    media: 'media/',
+    media: '../../media/',
     toolbox: toolbox
   });
 
@@ -175,8 +175,8 @@ function setCharacter() {
   */
   category = document.getElementById('category_logic');
   category.setAttribute("name", Blockly.Msg.CATEGORY_LOGIC);
-  category = document.getElementById('category_control');
-  category.setAttribute("name", Blockly.Msg.CATEGORY_CONTROL);
+  category = document.getElementById('category_loops');
+  category.setAttribute("name", Blockly.Msg.CATEGORY_LOOPS);
   category = document.getElementById('category_time');
   category.setAttribute("name", Blockly.Msg.CATEGORY_TIME);
   category = document.getElementById('category_math');
@@ -254,20 +254,20 @@ function setScript() {
   script.type = 'text/javascript';
   script.id = 'msg';
   var c = $.cookie("lang");
-  if (c != "") var param = c;
+  if(c) var param = c;
   else param = getParam();
   if (param == "ja") {
-    script.src = "msg/js/ja.js";
+    script.src = "../../msg/js/ja.js";
   } else {
-    script.src = "msg/js/en.js";
+    script.src = "../../msg/js/en.js";
   }
   var options = document.getElementById('languageMenu');
-  for (var i = 0; i < options.length; i++) {
-    if (options[i].value == param) {
-      options[i].selected = true;
+  for(var i=0;i<options.length;i++){
+    if(options[i].value == param){
+      options[i].selected=true;
     }
   }
-  var firstScript = document.getElementsByTagName('head')[0];
+  var firstScript = document.getElementsByTagName('head')[0].appendChild(script);
   firstScript.parentNode.insertBefore(script, firstScript);
   script.onload = function (e) {
     setCharacter();
@@ -294,14 +294,20 @@ $(document).ready(function () {
 });
 
 function getFiles() {
+  // return {"sketch.ino": Blockly.Generator.workspaceToCode('Arduino') }
+  //$('textarea#textarea_arduino').val() //&lt; et &lt;
   var code = $('textarea#textarea_arduino').val();
+
   code = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  //code=code.replace(">","&gt;");
+  //code = "<![CDATA[" + code + "]]>";
+  //document.write (code);
   return {
     "sketch.ino": code
   }
 }
 
-function change_lang(obj) {
+function change_lang(obj){
   var val = obj.options[obj.selectedIndex].value;
   $.cookie("lang", val, {
     expires: 7
