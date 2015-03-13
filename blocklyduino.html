@@ -8,6 +8,7 @@
   <script type="text/javascript" src="js/blocks_compressed.js"></script>
   <script type="text/javascript" src="js/arduino_compressed.js"></script>
   <script type="text/javascript" src="js/Blob.js"></script>
+  <script type="text/javascript" src="js/spin.js"></script>
   <script type="text/javascript" src="js/FileSaver.min.js"></script>
   <script type="text/javascript" src="js/blockly_helper.js"></script>
   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -22,17 +23,18 @@
     <option value="en">English</option>
     <option value="ja">日本語</option>
   </select>
-  <table>
+
+  <table height="100%" width="100%">
     <tr>
       <td>
-        <h1><a href="https://github.com/okhiroyuki/BlocklyDuino/wiki">BlocklyDuino</a> &gt; web-based visual programming editor for arduino</h1>
+        <h1><a href="https://github.com/gasolin/BlocklyDuino/wiki">BlocklyDuino</a> &gt; web-based visual programming editor for arduino</h1>
       </td>
     </tr>
     <tr>
       <td>
-        <table id="tab">
-          <tr id="tabRow">
-            <td id="tab_blocks" class="tabon" onclick="tabClick('blocks')"></td>
+        <table id="tab" width="100%">
+          <tr id="tabRow" height="1em">
+            <td id="tab_blocks" class="tabon" onclick="tabClick('blocks')">Blocks</td>
             <td class="tabmin">&nbsp;</td>
             <td id="tab_arduino" class="taboff" onclick="tabClick('arduino')"></td>
             <td class="tabmin">&nbsp;</td>
@@ -51,12 +53,11 @@
       </td>
     </tr>
     <tr>
-      <td id="content_area">
-      </td>
+      <td height="99%" id="content_area"></td>
     </tr>
   </table>
   <div id="content_blocks" class="content"></div>
-  <div id="content_arduino" class="content">
+  <div id="content_arduino" class="content" readonly wrap="off">
     <select id="cb_cf_boards"></select>
     <select id="cb_cf_ports"></select>
     <select id="cb_cf_programmers"> </select>
@@ -74,9 +75,7 @@
     <div id="cb_cf_serial_monitor"></div>
     <div id="serial_hud"></div>
   </div>
-  <!--div id="content_xml">
-<textarea id="textarea_xml" readonly></textarea>
-</div-->  <textarea id="content_xml" class="content" wrap="off"></textarea>
+  <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml id="toolbox" style="display: none">
     <category id="category_inout">
@@ -100,6 +99,7 @@
       <block type="logic_compare"></block>
       <block type="logic_operation"></block>
       <block type="logic_negate"></block>
+      <block type="logic_boolean"></block>
     </category>
     <category id="category_loops">
       <block type="controls_repeat"></block>
@@ -116,6 +116,7 @@
         </value>
       </block>
       <block type="controls_whileUntil"></block>
+      <block type="controls_flow_statements"></block>
     </category>
     <category id="category_time">
       <block type="millis"></block>
@@ -136,6 +137,7 @@
       <block type="text"></block>
     </category>
     <sep></sep>
+    <!--category id="category_variables" custom="VARIABLE"-->
     <category id="category_variables">
       <block type="variables_set"></block>
       <block type="variables_get"></block>

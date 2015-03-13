@@ -1175,7 +1175,7 @@ compilerflasher = function(lf){
         } else
         {
             compilerflasher.eventManager.fire('flash_succeed');
-          compilerflasher.setOperationOutput("upload completed");
+          compilerflasher.setOperationOutput(`Upload completed`);
         }
 
 
