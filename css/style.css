@@ -8,8 +8,8 @@ body {
   overflow: hidden;
 }
 h1 {
-  font-weight: normal;
   font-size: 140%;
+  font-weight: normal;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -19,8 +19,8 @@ h1 {
   border: 1px solid #ccc;
 }
 td.tabon {
-  border-bottom-color: #ddd !important;
   background-color: #ddd;
+  border-bottom-color: #ddd !important;
   padding: 5px 19px;
 }
 td.taboff {
@@ -31,34 +31,34 @@ td.taboff:hover {
   background-color: #eee;
 }
 td.tabmin {
-  border-top-style: none !important;
   border-left-style: none !important;
   border-right-style: none !important;
+  border-top-style: none !important;
 }
 td.tabmax {
-  border-top-style: none !important;
   border-left-style: none !important;
   border-right-style: none !important;
-  width: 99%;
+  border-top-style: none !important;
   text-align: right;
+  width: 99%;
 }
 
 table {
+  border: none;
   border-collapse: collapse;
   margin: 0;
   padding: 0;
-  border: none;
 }
 td {
   padding: 0;
   vertical-align: top;
 }
 .content {
-  visibility: hidden;
+  direction: ltr;
   margin: 0;
   padding: 1ex;
   position: absolute;
-  direction: ltr;
+  visibility: hidden;
 }
 pre.content {
   overflow: scroll;
@@ -70,23 +70,23 @@ pre.content {
   border-top: none !important;
 }
 #content_xml {
-  resize: none;
-  outline: none;
   border: none;
   font-family: monospace;
+  outline: none;
   overflow: scroll;
+  resize: none;
 }
 button {
-  padding: 1px 1em;
-  font-size: 90%;
-  border-radius: 4px;
-  border: 1px solid #ddd;
   background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
   color: black;
+  font-size: 90%;
+  padding: 1px 1em;
 }
 button.launch {
-  border: 1px solid #d43;
   background-color: #d43;
+  border: 1px solid #d43;
   color: white;
 }
 button:active {
@@ -102,8 +102,8 @@ button:hover {
 
 #languageMenu {
   position: absolute;
-  top: 10;
   right: 20;
+  top: 10;
 }
 
 button#fakeload {
@@ -111,42 +111,41 @@ button#fakeload {
 }
 
 #textarea_arduino{
-  padding: 1px 1em;
-  height: 60%;
-  overflow: auto;
-  width: 100%;
   background-color: rgba(8, 8, 8, 1);
   color : rgba(29, 147, 47, 1);
   font-size: 12px;
+  height: 60%;
   line-height: 12px;
+  overflow: auto;
+  padding: 1px 1em;
+  white-space: pre-wrap;
+  width: 100%;
   word-break: break-all;
   word-wrap: break-word;
-  white-space: pre-wrap;
 }
 
 #debug_arduino{
-  height: 40%;
-  border-width:2px;
-  border-color:black;
   background-color: rgba(8, 8, 8, 1);
+  border-color:black;
+  border-width:2px;
   color : rgba(29, 147, 47, 1);
+  height: 40%;
   overflow: auto;
+  white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  white-space: pre-wrap;
-
 }
 
 #serial_hud {
-  height: 85%;
-  overflow: auto;
   background-color: rgba(8, 8, 8, 1);
   color : rgba(29, 147, 47, 1);
   font-size: 20px;
   line-height: 20px;
+  height: 85%;
+  overflow: auto;
+  white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  white-space: pre-wrap;
 }
 
 #serial_monitor_content{
@@ -156,29 +155,11 @@ button#fakeload {
 #cb_cf_boards, #cb_cf_ports,#cb_cf_baud_rates {
   border: 1px solid #CCC;
   border-top-width: 1px;
-  border-right-width-value: 1px;
-  border-right-width-ltr-source: physical;
-  border-right-width-rtl-source: physical;
   border-bottom-width: 1px;
-  border-left-width-value: 1px;
-  border-left-width-ltr-source: physical;
-  border-left-width-rtl-source: physical;
   border-top-style: solid;
-  border-right-style-value: solid;
-  border-right-style-ltr-source: physical;
-  border-right-style-rtl-source: physical;
   border-bottom-style: solid;
-  border-left-style-value: solid;
-  border-left-style-ltr-source: physical;
-  border-left-style-rtl-source: physical;
   border-top-color: #CCC;
-  border-right-color-value: rgb(204, 204, 204);
-  border-right-color-ltr-source: physical;
-  border-right-color-rtl-source: physical;
   border-bottom-color: #CCC;
-  border-left-color-value: rgb(204, 204, 204);
-  border-left-color-ltr-source: physical;
-  border-left-color-rtl-source: physical;
   -moz-border-top-colors: none;
   -moz-border-right-colors: none;
   -moz-border-bottom-colors: none;
