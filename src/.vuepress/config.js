@@ -43,7 +43,7 @@ module.exports = {
       github: 'https://github.com/okhiroyuki/',
       feed: '',
     },
-    ga: 'UA-156973649-4',
+    ga: 'G-NPEHXJKD62',
     summary: 300,
     dateFormat: 'YYYY/MM/DD',
   },
