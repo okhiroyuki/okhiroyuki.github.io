@@ -1,5 +1,6 @@
 module.exports = {
   title: 'okhiroyuki.com',
+  dest: 'docs/',
   theme: 'blog-vuetify',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
