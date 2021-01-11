@@ -12,15 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/okhiroyuki/okhiroyuki.github.io.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Hiroyuki Okada",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/okhiroyuki/okhiroyuki.github.io/issues"
   },
   "homepage": "https://github.com/okhiroyuki/okhiroyuki.github.io#readme",
   "dependencies": {},
   "devDependencies": {
-    "markdown-it-video": "^0.6.3",
     "vuepress": "^1.8.0",
     "vuepress-theme-blog-vuetify": "^1.6.2"
   }
