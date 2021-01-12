@@ -14,6 +14,13 @@ module.exports = {
   },
   theme: 'blog-vuetify',
   themeConfig: {
+    seo: {
+      baseUrl: 'https://www.okhiroyuki.com',
+      articleDirectoryNames: [
+        '_posts',
+        '_pages',
+      ],
+    },
     globalPagination: {
       lengthPerPage: 3,
     },
@@ -41,10 +48,11 @@ module.exports = {
     },
     sns: {
       github: 'https://github.com/okhiroyuki/',
-      feed: '',
+      feed: '/rss.xml',
     },
     ga: 'G-NPEHXJKD62',
     summary: 300,
     dateFormat: 'YYYY/MM/DD',
   },
+  plugins: ['redirect-frontmatter'],
 }
