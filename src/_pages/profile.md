@@ -13,7 +13,7 @@ permalink: /profile
 
 ### RedMobile
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Xoe5Hf9Janw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://img.youtube.com/vi/Xoe5Hf9Janw/0.jpg)](https://www.youtube.com/watch?v=Xoe5Hf9Janw)
 
 Android上で [Node-RED](https://nodered.org/) を動かすことができるアプリとなります。
 
@@ -28,7 +28,7 @@ Android上で [Node-RED](https://nodered.org/) を動かすことができるア
 
 ### Fast Twitter Search
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nFbtJXX06BA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://img.youtube.com/vi/nFbtJXX06BA/0.jpg)](https://www.youtube.com/watch?v=nFbtJXX06BA)
 
 ログインなしでTwitter検索を行うだけのAndroidアプリになります。
 Flatterの練習用として作成したものです。
