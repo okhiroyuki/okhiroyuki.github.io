@@ -51,7 +51,7 @@ module.exports = {
       feed: '/rss.xml',
     },
     ga: 'G-NPEHXJKD62',
-    summary: 300,
+    summary: 100,
     dateFormat: 'YYYY/MM/DD',
   },
   plugins: ['redirect-frontmatter'],
