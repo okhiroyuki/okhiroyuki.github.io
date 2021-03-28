@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/okhiroyuki/okhiroyuki.github.io#readme",
   "devDependencies": {
-    "vuepress": "^1.8.1",
-    "vuepress-theme-blog-vuetify": "^1.6.2"
+    "vuepress": "^1.8.1"
   }
 }

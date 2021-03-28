@@ -1,10 +1,3 @@
----
-title: Profile
-permalink: /profile
----
-
-[[TOC]]
-
 ## Backgournd
 
 [Linkedin](https://www.linkedin.com/in/okhiroyuki) を参考ください。
